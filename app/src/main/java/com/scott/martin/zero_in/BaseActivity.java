@@ -4,23 +4,22 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.model.LatLng;
 import com.scott.martin.zero_in.adapter.ContactsAdapter;
+import com.scott.martin.zero_in.helper.ContactsHelper;
+import com.scott.martin.zero_in.helper.DirectionsHelper;
 import com.scott.martin.zero_in.helper.MapHelper;
+import com.scott.martin.zero_in.helper.SendHelper;
+import com.scott.martin.zero_in.listener.CheckAccountListener;
 import com.scott.martin.zero_in.model.Contact;
+import com.scott.martin.zero_in.server.CheckAccount;
 import com.scott.martin.zero_in.server.GCMRegister;
 import com.scott.martin.zero_in.server.RegisterSender;
-import com.scott.martin.zero_in.server.SendLocation;
 import com.scott.martin.zero_in.listener.GCMRegisterListener;
-import com.scott.martin.zero_in.listener.SendLocationListener;
 
 import android.app.Dialog;
-import android.content.ContentResolver;
 import android.content.Intent;
-import android.database.Cursor;
-import android.os.Handler;
-import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
-import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -29,14 +28,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class BaseActivity extends ActionBarActivity implements GCMRegisterListener {
@@ -48,16 +42,17 @@ public class BaseActivity extends ActionBarActivity implements GCMRegisterListen
 
 
 	private String senderPhoneNoCC, senderPhoneWithCC;
-	private double senderLong, senderLat;
+	private double userLong, userLat;
+	private double receivedLong, receivedLat;
 	private Context context;
 	private String recipientPhone = "", recipientName = "";
 	private ArrayList<Contact> contacts;
 	private GoogleApiClient googleApiClient;
 	private MapHelper mapHelper;
+	private ContactsHelper contactsHelper;
+	private Contact selectedContact;
 
-	private boolean receiverMarkerSet = false;
-	private TextView recipientView;
-	private Handler mHandler = new Handler();
+	private boolean showDirections = false;
 
 	private Dialog dialog;
 
@@ -68,46 +63,51 @@ public class BaseActivity extends ActionBarActivity implements GCMRegisterListen
 		context = this;
 
 		dialog = new Dialog(this);
-		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-		recipientView = (TextView) findViewById(R.id.recipient);
+		contactsHelper = new ContactsHelper(this);
 
-		mapHelper = new MapHelper(this);
-		Intent intent = getIntent();
-		if(intent.hasExtra("sender")){
-			Double receivedLong = Double.parseDouble(intent.getStringExtra("longitude"));
-			Double receivedLat = Double.parseDouble(intent.getStringExtra("latitude"));
-			mapHelper.setMapMarker(receivedLong, receivedLat);
-			receiverMarkerSet = true;
+		if(checkPlayServices()) {
+
+			mapHelper = new MapHelper(this);
+			Intent intent = getIntent();
+			if (intent.hasExtra("sender")) {
+				receivedLong = Double.parseDouble(intent.getStringExtra("longitude"));
+				receivedLat = Double.parseDouble(intent.getStringExtra("latitude"));
+				showDirections = true;
+			}else{
+				showDirections = false;
+			}
+
+			buildGoogleApiClient();
+
+			//LatLng origin = new LatLng(37.305310, -122.041747);
+			//LatLng dest = new LatLng(37.315292, -122.056603);
+			//mapHelper.directions(origin, dest);
+
+
+
+			String regid = getSharedPrefernces(PROPERTY_REG_ID);
+
+			contacts = contactsHelper.getContacts();
+
+			senderPhoneWithCC = getSharedPrefernces(PROPERTY_PHONE_WITH_CC);
+			if (senderPhoneWithCC.isEmpty()) {
+				getSenderPhoneNumber();
+			} else {
+				senderPhoneNoCC = getSharedPrefernces(PROPERTY_PHONE_NO_CC);
+			}
+
+			Button addRecipient = (Button) findViewById(R.id.add_recipient);
+			addRecipient.setOnClickListener(addRecipientListener);
+
+			if (regid.isEmpty()) {
+				System.out.println("GCM Register");
+				new GCMRegister(this, this).execute();
+			} else {
+				new RegisterSender(context, senderPhoneNoCC, senderPhoneWithCC, regid).execute();
+			}
 		}
-
-		buildGoogleApiClient();
-
-		String regid = getSharedPrefernces(PROPERTY_REG_ID);
-
-
-		contacts = queryContacts();
-
-		senderPhoneWithCC = getSharedPrefernces(PROPERTY_PHONE_WITH_CC);
-		if(senderPhoneWithCC.isEmpty()){
-			getSenderPhoneNumber();
-		}else{
-			senderPhoneNoCC = getSharedPrefernces(PROPERTY_PHONE_NO_CC);
-		}
-
-		Button sendLocation = (Button) findViewById(R.id.send_location);
-		sendLocation.setOnClickListener(sendLocationListener);
-
-		Button addRecipient = (Button) findViewById(R.id.add_recipient);
-		addRecipient.setOnClickListener(addRecipientListener);
-
-		if(regid.isEmpty()){
-			System.out.println("GCM Register");
-			new GCMRegister(this, this).execute();
-		}else{
-			new RegisterSender(context, senderPhoneNoCC, senderPhoneWithCC, regid).execute();
-		}
-
 	}
 
 	/**
@@ -147,7 +147,6 @@ public class BaseActivity extends ActionBarActivity implements GCMRegisterListen
 
 		@Override
 		public void onClick(View v) {
-			final Dialog dialog = new Dialog(context);
 			dialog.setContentView(R.layout.dialog_contacts);
 			dialog.setTitle("Contacts");
 
@@ -159,73 +158,26 @@ public class BaseActivity extends ActionBarActivity implements GCMRegisterListen
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 					recipientName = contacts.get(position).getName();
 					recipientPhone = contacts.get(position).getPhone();
-
-					recipientView.setText("Send to...\n" + recipientName);
-
-					dialog.dismiss();
+					selectedContact = contacts.get(position);
+					new CheckAccount(context, recipientPhone, checkAccountListener).execute();
 				}
 			});
 			dialog.show();
 		}
 	};
 
-	private ArrayList<Contact> queryContacts(){
-		ArrayList<Contact> contacts = new ArrayList<Contact>();
-
-		ContentResolver cr = this.getContentResolver();
-		Cursor cursor = cr.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
-
-		if(cursor.getCount() > 0){
-			while (cursor.moveToNext()) {
-				Contact contact = new Contact();
-
-				String id = cursor.getString(
-						cursor.getColumnIndex(ContactsContract.Contacts._ID));
-				String name = cursor.getString(
-						cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-
-				contact.setName(name);
-
-				if (Integer.parseInt(cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))) > 0) {
-					Cursor pCur = cr.query(
-							ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-							null,
-							ContactsContract.CommonDataKinds.Phone.CONTACT_ID +" = ?",
-							new String[]{id}, null);
-					while (pCur.moveToNext()) {
-						String phonenumber = pCur.getString(pCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-						contact.setPhone(phonenumber);
-					}
-					pCur.close();
-
-					contacts.add(contact);
-				}
-			}
-		}
-		cursor.close();
-
-		return contacts;
-	}
-
-	View.OnClickListener sendLocationListener = new View.OnClickListener() {
+	CheckAccountListener checkAccountListener = new CheckAccountListener() {
 		@Override
-		public void onClick(View v) {
-			if(recipientPhone.isEmpty()){
-				Toast.makeText(getApplicationContext(), getString(R.string.recipient_error),
-						Toast.LENGTH_LONG).show();
+		public void onCheckComplete(boolean hasAccount) {
+
+			if(hasAccount){
+				System.out.println("HAS ACCOUNT");
+				SendHelper sendHelper = new SendHelper(context, recipientName, recipientPhone, senderPhoneWithCC, userLat, userLong);
+				sendHelper.showCountDown(true);
 			}else{
-
-				recipientPhone = recipientPhone.replaceAll("[^?0-9]+", "");
-
-				dialog.setContentView(R.layout.dialog_progress);
-				TextView status = (TextView) dialog.findViewById(R.id.status);
-				status.setText("Sending location...");
-				ProgressBar spinner = (ProgressBar) dialog.findViewById(R.id.progress_bar);
-				spinner.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
-				dialog.show();
-
-				new SendLocation(context, senderPhoneWithCC, recipientPhone, senderLong, senderLat, sendCompleteListener).execute();
-
+				System.out.println("NO ACCOUNT");
+				SendHelper sendHelper = new SendHelper(context, recipientName, recipientPhone, senderPhoneWithCC, userLat, userLong);
+				sendHelper.displaySendMethod(selectedContact);
 			}
 		}
 	};
@@ -242,34 +194,6 @@ public class BaseActivity extends ActionBarActivity implements GCMRegisterListen
 		editor.commit();
 	}
 
-	SendLocationListener sendCompleteListener = new SendLocationListener() {
-		@Override
-		public void onSendComplete(boolean validPush) {
-			if(!validPush){
-				SmsManager smsManager = SmsManager.getDefault();
-				String message = "Has shared their location\nhttps://maps.google.com/maps?q="+ senderLat + "," + senderLong;
-				smsManager.sendTextMessage(recipientPhone, null, message, null, null);
-			}
-
-			TextView status = (TextView) dialog.findViewById(R.id.status);
-			ProgressBar progress = (ProgressBar) dialog.findViewById(R.id.progress_bar);
-			progress.setVisibility(View.INVISIBLE);
-
-
-			status.setText("Location sent :)");
-
-			mHandler.postDelayed(new Runnable() {
-				public void run() {
-					dialog.dismiss();
-				}
-			}, 2000);
-
-			recipientPhone = "";
-			recipientName = "";
-			recipientView.setText("Send to...");
-		}
-	};
-
 	protected synchronized void buildGoogleApiClient() {
 		System.out.println("Building Google Api Client");
 		googleApiClient = new GoogleApiClient.Builder(this)
@@ -285,17 +209,25 @@ public class BaseActivity extends ActionBarActivity implements GCMRegisterListen
 			Location lastLocation = LocationServices.FusedLocationApi.getLastLocation(
 					googleApiClient);
 			if (lastLocation != null) {
-				senderLat = lastLocation.getLatitude();
-				senderLong = lastLocation.getLongitude();
-
+				userLat = lastLocation.getLatitude();
+				userLong = lastLocation.getLongitude();
 
 			}else{
-				senderLong = 86.922623;
-				senderLat = 27.986065;
+				userLong = 86.922623;
+				userLat = 27.986065;
 			}
 
-			if(!receiverMarkerSet){
-				mapHelper.setMapMarker(senderLong, senderLat);
+			System.out.println("Sender longitude: " + userLong);
+			System.out.println("Sender Latitude: " + userLat);
+
+			if(showDirections){
+				LatLng origin = new LatLng(userLat, userLong);
+				LatLng dest = new LatLng(receivedLat, receivedLong);
+				//mapHelper.setMapMarker(senderLong, senderLat);
+				mapHelper.directions(origin, dest);
+			}else{
+				LatLng origin = new LatLng(userLat, userLong);
+				mapHelper.setMapMarker(origin);
 			}
 		}
 
@@ -353,17 +285,13 @@ public class BaseActivity extends ActionBarActivity implements GCMRegisterListen
 	@Override
 	protected void onStart(){
 		super.onStart();
-		if(checkPlayServices()){
-			googleApiClient.connect();
-		}
-		contacts = queryContacts();
+		if(checkPlayServices()){ googleApiClient.connect(); }
+		contacts = contactsHelper.getContacts();
 	}
 
 	@Override
 	protected  void onStop(){
-		if(checkPlayServices()){
-			googleApiClient.disconnect();
-		}
+		if(checkPlayServices()){ googleApiClient.disconnect(); }
 		super.onStop();
 	}
 

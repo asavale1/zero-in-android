@@ -2,151 +2,102 @@
 <items version="2" >
 
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-95dc41ed2d8b8e25b24a09b16bfbc752417dd93e.jar" />
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-bcba76cbad5df2a7afe9ddbf8e6323ed51ad5eaa.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-33b73dceb432920b90844a5cf65351f86835e97d.jar" />
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-42e59b4c59aec260af94bd0ab2e3a6bf0365ad09.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="565a01f90f1529f73362707c4c185d0623a68782">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-904e23ddeb774a22e9df8fa9272b1fa303ff46cc.jar" />
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-f42f0768d361414e304affa347f01eff444539b1.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-d4bf70027e6c88139e03b592504707fb7891dbfd.jar" />
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-f2c7f7bbd4457d8f9befaddce646ce4b62ac9601.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-cebcbe256be739825517925292f238ec0c1764e3.jar" />
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-96c70bbddc668da90eef765a4dccaa10a6a8bc84.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.3.0/classes.jar"
+        jar="/opt/android-libs/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-2aa3b19ee7f37f8c68126d86561ba868adc15205.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-1df15a793c4e9b027446620d2f428ab87cbc357e.jar" />
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-4a0ca43c79dc225cd0f953330ed07c4c77a8c32e.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-d0fde898d0e62c580d959fecd7e9446e3209f0a1.jar" />
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-15de01da2b70753ebb600f4d333a2cbdbb9bc7dc.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-fe0c14f30cefa958fbc2834daaaf0ee453bbb0e1.jar" />
-    </item>
-    <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-7c8d82834fd5098c7a3e4fdd2610815a0d3fbb34.jar" />
-    </item>
-    <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-5ae95c987d126cef6a303be7ae0cf186e209aad4.jar" />
-    </item>
-    <item
-        jar="/home/ameya/dev/android-development-libraries/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jar="/opt/android-libs/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-2d05d79a122f9a1dda7153756b00b0a77752018b.jar" />
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-2aa3b19ee7f37f8c68126d86561ba868adc15205.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-60efe69482b8ba9a74d3424c98c5f5457601336f.jar" />
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-d01e1fa6b5856db9ce2cd8974dd81a66291ba35e.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-71b28444490baa0b1a8f5c056fb126adec29fdf7.jar" />
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-27600e2533f99597f419884bf3c4a21a419a4c8f.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-77adcc68666daa8228fd01fe6c55ef0ea421de14.jar" />
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-c86cf1d804c085ca4a7e52469b06ca0791cc6a03.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-8db794f0d28688badff43bd7cf618dacd668f36f.jar" />
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-6169cacfa705643953b4582f25b5ef9a4f0b0efb.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-cfcd7795fa224466bcacb6867b5b7cf833e7df37.jar" />
-    </item>
-    <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-eefdb5a8aa01600b2d15baf10bbc33b31502cfb2.jar" />
-    </item>
-    <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-66271ea99ac5cafe222635cffdb3ca645cefd3fd.jar" />
-    </item>
-    <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-c5b766926f4c16382ef0a5736ea53e6db360bf93.jar" />
-    </item>
-    <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-96fa597d15da9beaae931a7df2696b3325345007.jar" />
-    </item>
-    <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-d3c9f96ffb00d1b4397209f9c78ce7959bfdbbef.jar" />
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-a4e7381e5452cd32742bc30080bd4e874c8f1022.jar" />
     </item>
     <item
         jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
@@ -156,18 +107,102 @@
         <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-04898f6f7cd45c39555bef046fb729a978c6621e.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-1e9e4b72e301ada4ca550daaec88cd6dd7db9792.jar" />
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-64d909b776f6bddad82f0c78c11455f97923493d.jar" />
     </item>
     <item
-        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.3.0/classes.jar"
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
-        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-ae2555fe1990307c6a6a9aa32eb4c184fbbe6f5e.jar" />
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-204ad3c714ee4266de209546a672be439281c2dd.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-ad244b242af0829f3b551ea03d63fc529c3cb813.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-04898f6f7cd45c39555bef046fb729a978c6621e.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-cfcd7795fa224466bcacb6867b5b7cf833e7df37.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-d9656c44d0c515fd27dd0e070ef5e3e26e200779.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-cfcd7795fa224466bcacb6867b5b7cf833e7df37.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-833c428289b6b74940e86dd04e039c113e4613d5.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-a2c5a59e243b731dca8b70b93afa0124775f0e54.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-5c724838b8f533e613d97b84ac5df7e1f54be64b.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-ea1e6b6208377be6519caf8a7935ba4701cceb93.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-79a74d5140c5b7aafdcd57e44ae951db18dc1484.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-f49464b6e2c8b30377e59d98dc805abf6d018169.jar" />
+    </item>
+    <item
+        jar="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="/home/ameya/studio_projects/martin_scott/FindMe/app/build/intermediates/pre-dexed/debug/classes-46e0fcae6bd582236c8243d73ea72b168b099712.jar" />
     </item>
 
 </items>

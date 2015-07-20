@@ -5,7 +5,7 @@
 
     <ListView
         android:id="@+id/contacts_list"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
 </LinearLayout><!-- From: file:/home/ameya/studio_projects/martin_scott/FindMe/app/src/main/res/layout/dialog_contacts.xml -->

@@ -50,14 +50,16 @@ public class LocationIntentService extends IntentService {
         nm = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
         Intent intent = new Intent(this, BaseActivity.class);
         intent.putExtras(extras);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        System.out.println(extras.toString());
 
         NotificationCompat.Builder nb = new NotificationCompat.Builder(this);
         nb.setSmallIcon(R.drawable.logox96);
         nb.setContentTitle("Find Me Notification");
         nb.setStyle(new NotificationCompat.BigTextStyle().bigText("Location received"));
 
-        nb.setContentText("Location received");
+        nb.setContentText("Location received " + intent.getStringExtra("sender"));
         nb.setAutoCancel(true);
 
 

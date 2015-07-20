@@ -9,6 +9,10 @@
     <string name="property_app_version">app_version</string>
     <string name="send_location_url">http://aqueous-meadow-1911.herokuapp.com/send_location</string>
     <string name="register_url">http://aqueous-meadow-1911.herokuapp.com/register_sender</string>
+    <string name="check_account_url">http://aqueous-meadow-1911.herokuapp.com/has_account</string>
+    <string name="log_location_url">http://aqueous-meadow-1911.herokuapp.com/log_location</string>
+    <string name="send_via_message">messaging</string>
+    <string name="send_via_whatsapp">whatsapp</string>
 
     <string-array name="country_codes" >
         <item>93,AF</item>

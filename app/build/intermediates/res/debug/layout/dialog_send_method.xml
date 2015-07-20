@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:textSize="20sp"
+        android:text="Send via..."/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="20dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/messaging"
+            android:background="@drawable/messaging"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/whatsapp"
+            android:id="@+id/whatsapp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout><!-- From: file:/home/ameya/studio_projects/martin_scott/FindMe/app/src/main/res/layout/dialog_send_method.xml -->

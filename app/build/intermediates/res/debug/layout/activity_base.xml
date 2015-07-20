@@ -15,31 +15,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/send_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#fff"
-            android:text="Send"
-            android:layout_alignParentLeft="true"
-            android:background="#000"/>
-
-        <TextView
+        <!--<TextView
             android:id="@+id/recipient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
             android:text="Send to..."
             android:textColor="#fff"
-            android:layout_centerHorizontal="true"/>
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>-->
 
         <Button
             android:id="@+id/add_recipient"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:text="Send To"
             android:textColor="#fff"
-            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
             android:background="#000"/>
+
+        <!--<Button
+            android:id="@+id/whatsapp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="WhatsApp"
+            android:textColor="#fff"
+            android:layout_toRightOf="@id/add_recipient"
+            android:background="#000"/>-->
 
     </RelativeLayout>
 
